@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>Главная</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body class="theme-light">
+	<button type="button" class="gear" data-lp>
+		<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16">
+			<path d="M15.2 6l-1.1-0.2c-0.1-0.2-0.1-0.4-0.2-0.6l0.6-0.9 0.5-0.7-2.6-2.6-0.7 0.5-0.9 0.6c-0.2-0.1-0.4-0.1-0.6-0.2l-0.2-1.1-0.2-0.8h-3.6l-0.2 0.8-0.2 1.1c-0.2 0.1-0.4 0.1-0.6 0.2l-0.9-0.6-0.7-0.4-2.5 2.5 0.5 0.7 0.6 0.9c-0.2 0.2-0.2 0.4-0.3 0.6l-1.1 0.2-0.8 0.2v3.6l0.8 0.2 1.1 0.2c0.1 0.2 0.1 0.4 0.2 0.6l-0.6 0.9-0.5 0.7 2.6 2.6 0.7-0.5 0.9-0.6c0.2 0.1 0.4 0.1 0.6 0.2l0.2 1.1 0.2 0.8h3.6l0.2-0.8 0.2-1.1c0.2-0.1 0.4-0.1 0.6-0.2l0.9 0.6 0.7 0.5 2.6-2.6-0.5-0.7-0.6-0.9c0.1-0.2 0.2-0.4 0.2-0.6l1.1-0.2 0.8-0.2v-3.6l-0.8-0.2zM15 9l-1.7 0.3c-0.1 0.5-0.3 1-0.6 1.5l0.9 1.4-1.4 1.4-1.4-0.9c-0.5 0.3-1 0.5-1.5 0.6l-0.3 1.7h-2l-0.3-1.7c-0.5-0.1-1-0.3-1.5-0.6l-1.4 0.9-1.4-1.4 0.9-1.4c-0.3-0.5-0.5-1-0.6-1.5l-1.7-0.3v-2l1.7-0.3c0.1-0.5 0.3-1 0.6-1.5l-1-1.4 1.4-1.4 1.4 0.9c0.5-0.3 1-0.5 1.5-0.6l0.4-1.7h2l0.3 1.7c0.5 0.1 1 0.3 1.5 0.6l1.4-0.9 1.4 1.4-0.9 1.4c0.3 0.5 0.5 1 0.6 1.5l1.7 0.3v2z"></path>
+			<path d="M8 4.5c-1.9 0-3.5 1.6-3.5 3.5s1.6 3.5 3.5 3.5 3.5-1.6 3.5-3.5c0-1.9-1.6-3.5-3.5-3.5zM8 10.5c-1.4 0-2.5-1.1-2.5-2.5s1.1-2.5 2.5-2.5 2.5 1.1 2.5 2.5c0 1.4-1.1 2.5-2.5 2.5z"></path>
+		</svg>
+	</button>
+	<div class="settings">
+		<!-- Настройки -->
+		<div class="settings__row">
+			<h2 class="settings__title title">Размер поля</h2>
+			<div class="settings__btns">
+				<button type="button" class="btn" data-size="8">8x8</button>
+				<button type="button" class="btn" data-size="10">10x10</button>
+				<button type="button" class="btn" data-size="15">15x15</button>
+				<button type="button" class="btn" data-size="20">20x20</button>
+				<button type="button" class="btn" data-size="25">25x25</button>
+			</div>
+		</div>
+		<div class="settings__row">
+			<h2 class="settings__title title">Количество бомб</h2>
+			<div class="settings__btns">
+				<input autocomplete="off" type="number" name="form[]">
+			</div>
+		</div>
+		<div class="settings__row">
+			<h2 class="settings__title title">Тема</h2>
+			<div class="settings__btns">
+				<button type="button" class="btn" data-theme="dark">Темная</button>
+				<button type="button" class="btn" data-theme="light">Светлая</button>
+			</div>
+		</div>
+	</div>
+	<div class="sapper">
+		<h1 class="sapper__title">Сапер</h1>
+		<button type="button" class="sapper__start btn">Начать сначала</button>
+		<button type="button" class="sapper__flag btn" data-flag="off"><span>Поставить </span> <span>Снять </span>&#160;флаг</button>
+		<div class="sapper__wrapper">
+			<div class="sapper__grid"> </div>
+		</div>
+
+	</div>
+	<div id="start" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<button data-close type="button" class="popup__close">
+					<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 18 18">
+						<defs>
+							<path id="avzva" d="M691.485 160.07l-1.414 1.415-7.071-7.071-7.071 7.071-1.414-1.414 7.07-7.071-7.07-7.071 1.414-1.415 7.07 7.071 7.072-7.07 1.414 1.414-7.07 7.07z" />
+						</defs>
+						<g>
+							<g transform="translate(-674 -144)">
+								<use xlink:href="#avzva" />
+							</g>
+						</g>
+					</svg>
+				</button>
+				<div class="popup__text">
+					<h3 class="popup__title title">Добро пожаловать!</h3>
+					<div>
+						<p>Простая игра "сапер". Если вы не играли в нее, то стоит попробовать. Ну, а если играли, то поиграйте еще раз.</p>
+						<p>Если кто забыл или не знал, то <a href="https://ru.wikipedia.org/wiki/%D0%A1%D0%B0%D0%BF%D1%91%D1%80_(%D0%B8%D0%B3%D1%80%D0%B0)">тут правила игры</a>.</p>
+						<p>В игре есть пара настроек, которые вы сможете увидеть, нажав на шестеренку.</p>
+						<p>Управление осуществляется нажатием ЛКМ, если пк, тапом, если это тач-устройство (телефон, планшет...). Чтобы поставить флаг, нажите на кнопку "Поставить флаг", либо ПКМ, если это ПК, либо долгим тачем, если это тач-устройство. Снять флаг можно таким же способом.</p>
+						<p>По умолчанию используется поле 8х8 с 10 минами.</p>
+						<p>Удачи!</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="js/app.min.js"></script>
+</body>
+
+</html>
